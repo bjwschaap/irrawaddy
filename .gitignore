@@ -1,0 +1,6 @@
+.idea
+db.sqlite
+log
+tmp
+pkg
+results.html
