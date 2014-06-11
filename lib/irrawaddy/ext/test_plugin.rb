@@ -1,9 +1,7 @@
 module Irrawaddy
   module Plugins
 
-    class TestPlugin
-
-      include Plugin
+    class TestPlugin < IrrawaddyPlugin
 
       def do_something
         puts 'Hello world from TestPlugin!'
