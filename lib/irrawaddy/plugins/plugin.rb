@@ -17,7 +17,6 @@ module Irrawaddy
       end
 
       def self.included(klass)
-        puts 'extending with ClassMethods'
         klass.extend ClassMethods
       end
 

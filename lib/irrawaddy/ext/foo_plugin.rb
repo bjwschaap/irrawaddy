@@ -1,7 +1,9 @@
 module Irrawaddy
   module Plugins
 
-    class FooPlugin < IrrawaddyPlugin
+    class FooPlugin
+
+      include Plugin
 
       def do_something
         puts 'Fubar from FooPlugin!!'

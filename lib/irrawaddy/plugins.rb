@@ -1,5 +1,4 @@
 require 'irrawaddy/plugins/plugin'
-require 'irrawaddy/plugins/irrawaddy_plugin'
 
 module Irrawaddy
   module Plugins
