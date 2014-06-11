@@ -19,6 +19,9 @@ module Irrawaddy
       Irrawaddy.world.trigger(Irrawaddy::Actions::TemplateAction)
     end
 
+    get '/plugins' do
+      json Irrawaddy::Plugins::IrrawaddyPlugin.repository
+    end
 
 
   end

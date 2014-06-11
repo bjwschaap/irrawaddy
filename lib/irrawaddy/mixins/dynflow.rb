@@ -3,7 +3,6 @@ module Irrawaddy
     module Dynflow
 
       def world
-        p 'Getting World'
         return @world if @world
 
         @world = ::Dynflow::SimpleWorld.new(

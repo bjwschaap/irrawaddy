@@ -12,7 +12,7 @@ socket              = File.join('/tmp', 'dynflow_socket')
 persistence_adapter = Dynflow::PersistenceAdapters::Sequel.new ARGV[0] || 'sqlite://db.sqlite'
 world               = Dynflow::SimpleWorld.new persistence_adapter: persistence_adapter
 listener            = Dynflow::Listeners::Socket.new world, socket
-plugin_path         = File.join(File.dirname(__FILE__),"/","plugins")
+plugin_path         = File.join(File.dirname(__FILE__),'./','ext')
 
 
 lib_glob = File.join(File.join(plugin_path),'**', '*.rb')
