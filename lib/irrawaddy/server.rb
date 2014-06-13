@@ -1,3 +1,5 @@
+require 'yaml'
+
 module Irrawaddy
 
   class Server < Sinatra::Base
@@ -21,6 +23,19 @@ module Irrawaddy
 
     get '/plugins' do
       json Irrawaddy::Plugins::IrrawaddyPlugin.repository
+    end
+
+    post '/test2' do
+      begin
+        halt 400, 'An incorrect YAML template was submitted' unless request.media_type == 'application/yaml'
+        request.body.rewind
+        template = YAML.load request.body.read
+        halt 400, 'An incorrect YAML template was submitted' unless template
+        "You submitted template: \n#{YAML.dump(template)}"
+
+      rescue
+        halt 400, 'An incorrect YAML template was submitted'
+      end
     end
 
 

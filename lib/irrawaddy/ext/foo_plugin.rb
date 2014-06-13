@@ -3,8 +3,8 @@ module Irrawaddy
 
     class FooPlugin < IrrawaddyPlugin
 
-      def do_something
-        puts 'Fubar from FooPlugin!!'
+      def do_something_else(param)
+        puts "Fubar from FooPlugin with #{param}!!"
       end
 
     end
